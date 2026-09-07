@@ -25,10 +25,13 @@ public class ex12 {
         double galoes = Math.ceil(litrosFolga/4);
         double precoGaloes = galoes * 25;
         
-        double precomistura = (latas *) + (ad);
+        int latasMistura = (int) (litrosFolga / 18);
+        double sobraLitros = litrosFolga % 18;
+        double galoesMistura = Math.ceil(sobraLitros / 4);
+        double precoMistura = (latasMistura * 80) + (galoesMistura * 25);
         
         System.out.println(precoLatas + " se comprar apenas latas de 18 litros");
         System.out.println(precoGaloes + " se comprar apenas galoes de 4 litros");
-        System.out.println(precomistura + " se misturar latas e galoes");
+        System.out.println(precoMistura + " se misturar latas e galoes");
     }
 }
