@@ -33,8 +33,8 @@ public class ex02 {
                 System.out.printf("\n");
                 System.out.printf("\n Tabuada do %d",n1);
                 System.out.printf("\n===================");
-                for(int n4 = 1; n4 <=10; n4++){
-                    System.out.printf("\n%d x %d = %d", n1,n4, n1*n4);
+                for(int n3=1; n3 <=10; n3++){
+                    System.out.printf("\n%d x %d = %d", n1,n3, n1*n3);
                 }
             }
         }
