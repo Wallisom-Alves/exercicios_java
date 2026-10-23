@@ -13,16 +13,11 @@ public class jogo_velha {
     public static void main (String []args){
         Scanner ent = new Scanner (System.in);
         
-        char [][] matriz = {
-            {' ', ' ', ' '},
-            {' ', ' ', ' '},
-            {' ', ' ', ' '}
-        };
+        String [][] matriz = new String [3][3];
         
         int l = 0;
         int c = 0;
         boolean reload = true;
-        boolean condicao = true;
         int xy = 0;
         int linha = 0;
         int coluna = 0;
@@ -68,7 +63,7 @@ public class jogo_velha {
                     }
                     pula = 1;
                     xy = 1;
-                    matriz [l][c] = 'X';
+                    matriz [l][c] = "X";
                     System.out.print("\n");
                     break;
                 case 1:
@@ -92,7 +87,7 @@ public class jogo_velha {
                     }
                     pula = 1;
                     xy = 0;
-                    matriz [l][c] = 'O';
+                    matriz [l][c] = "O";
                     System.out.print("\n");
                     break;
             }
@@ -108,33 +103,6 @@ public class jogo_velha {
                     break;
                 }
                 System.out.println("\n-----------");
-            }
-            while (condicao){
-                for (l = 0; l < 3; l++){
-                    for(c = 0; c < 3; c++){
-                        if(matriz[0][l] == matriz[c][l]){
-                            System.out.printf("\nJogador %s VENCEU!!!", matriz[0][l]);
-                            condicao = false;
-                            break;
-                        }else if (matriz[l][0] == matriz[l][c]){
-                            System.out.printf("\nJogador %s VENCEU!!!", matriz[l][0]);
-                            condicao = false;
-                            break;
-                        }else if (matriz[l][l] == matriz[c][c]){
-                            System.out.printf("\nJogador %s VENCEU!!!", matriz[l][l]);
-                            condicao = false;
-                            break;
-                        }else if (matriz[0][3] == matriz[1][1] && matriz[1][1] == matriz[3][0]){
-                            System.out.printf("\nJogador %s VENCEU!!!", matriz[0][3]);
-                            condicao = false;
-                            break;
-                        }else {
-                            System.out.println("\nVELHAAAAA!!!!!!");
-                            condicao = false;
-                            break;
-                        }
-                    }
-               }
             }
         }
     }
