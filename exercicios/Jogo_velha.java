@@ -27,7 +27,7 @@ public class Jogo_velha {
         int xy = 0;
         int contagem = 0;
 
-        iniciar();
+        estrutura(matriz);
             
         while (reload){
             jogador(matriz, xy, verificacao, l, c, contagem, ent);
@@ -35,18 +35,6 @@ public class Jogo_velha {
             estrutura(matriz);
             
             condicao(matriz, l, c, reload, contagem);
-        }
-    }
-    
-    public static void iniciar (){
-        for (int l = 0; l < 3; l++){
-            System.out.print("   |   |   \n");
-            if (l == 2){
-                break;
-            }
-            for (int c = 0; c < 1; c++){
-                System.out.println("-----------");
-            }
         }
     }
     public static void estrutura (char [][] matriz){
